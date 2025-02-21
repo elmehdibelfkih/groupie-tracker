@@ -1,19 +1,29 @@
 package internal
 
-// import "json"
+import "html/template"
 
 const API_URL = "https://groupietrackers.herokuapp.com/api"
 
+var INDEX_TMPL *template.Template
+var LOCATIONS_TMPL *template.Template
+var DATES_TMPL *template.Template
+var RELATIONS_TMPL *template.Template
+
+const (
+	INDEX_PATH     = "./templates/index.html"
+	LOCATIONS_PATH = "./templates/locations.html"
+	DATES_PATH     = "./templates/dates.html"
+	RELATIONS_PATH = "./templates/relations.html"
+)
+
 type APIs struct {
-	Artists   string `jason:"artists"`
-	Locations string `jason:"locations"`
-	Dates     string `jason:"dates"`
-	Relation  string `jason:"relation"`
+	Artists   string `json:"artists"`
+	Locations string `json:"locations"`
+	Dates     string `json:"dates"`
+	Relation  string `json:"relation"`
 }
 
-// Artists
 type Artists []Artist
-
 type Artist struct {
 	Id           int      `json:"id"`
 	Image        string   `json:"image"`
@@ -21,39 +31,23 @@ type Artist struct {
 	Members      []string `json:"members"`
 	CreationDate int      `json:"creationDate"`
 	FirstAlbum   string   `json:"firstAlbum"`
-	// Locations    string   `json:"locations"`    // FIXME: must be a pointer to a struct
-	// ConcertDates string   `json:"concertDates"` // FIXME: must be a pointer to a struct
-	// Relations    string   `json:"relations"`    // FIXME: must be a pointer to a struct
-	Relation *Relation
+	Locations    string   `json:"locations"`
+	ConcertDates string   `json:"concertDates"`
+	Relations    string   `json:"relations"`
 }
-
-// // Locations
-// type Locations struct {
-// 	Location []Location `json:"index"`
-// }
-
-// type Location struct {
-// 	Id        int      `json:"id"`
-// 	Locations []string `json:"locations"`
-// 	Dates     string   `json:"dates"` // FIXME: must be a struct
-// }
-
-// // Dates
-// type Dates struct {
-// 	Dates []Date `json:"index"`
-// }
-
-// type Date struct {
-// 	Id    int      `json:"id"`
-// 	Dates []string `json:"dates"`
-// }
-
-// Relations
-type Relations struct {
-	Relations []Relation `json:"index"`
+type Location struct {
+	Id        int      `json:"id"`
+	Artist    *Artist  `json:"-"`
+	Locations []string `json:"locations"`
+}
+type Date struct {
+	Id     int      `json:"id"`
+	Artist *Artist  `json:"-"`
+	Dates  []string `json:"dates"`
 }
 
 type Relation struct {
 	Id             int                 `json:"id"`
+	Artist         *Artist             `json:"-"`
 	DatesLocations map[string][]string `json:"datesLocations"`
 }

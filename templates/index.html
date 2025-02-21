@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GROUPIE-TARCKER</title>
+    <link rel="stylesheet" href="/static/index.css">
+</head>
+
+<body>
+    {{range .}}
+    <div class="artist-card">
+        <a href="/Relation/{{.Id}}" >
+            <img src="{{.Image}}" alt="{{.Id}}" decoding="async" loading="lazy">
+            <p>{{.Name}}</p>
+            <a href="/Locations/{{.Id}}">
+                <button class="button1">Locations</button>
+            </a>
+            <a href="/Dates/{{.Id}}">
+                <button class="button1">Dates</button>
+            </a>
+            <!-- <a href="/artist/Relation/{{.Id}}">
+                <button class="button1">Relation</button>
+            </a> -->
+        </a>
+    </div>
+    {{end}}
+</body>
+
+</html>

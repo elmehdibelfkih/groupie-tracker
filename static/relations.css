@@ -1,0 +1,31 @@
+body {
+    /* display:flex; */
+    font-family: Arial, sans-serif;
+    background-color: #181717;
+    text-align: center;
+}
+
+/* .card {
+    display: inline-block;
+    background: rgb(87, 83, 83);
+
+} */
+
+/* .artist { */
+    /* border: 4px; */
+/* } */
+
+.info {
+    border: 2px solid black;}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+
+    background: rgb(87, 83, 83);
+    /* border: #181717; */
+
+}

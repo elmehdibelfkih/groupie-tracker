@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{.Artist.Name}}</title>
+    <link rel="stylesheet" href="/static/relations.css">
+</head>
+<body>
+    <div class="card">
+        <div class="artist">
+            <img src="{{.Artist.Image}}" alt="" decoding="async" loading="lazy">
+            <p>{{.Artist.Name}}</p>
+        </div>
+        <div class="info">
+            <p><strong>Members</strong></p>
+            <ul>
+                {{range .Artist.Members}}
+                <li>
+                    {{.}}
+                </li>
+                {{end}}
+                <p><strong>Creation Date: </strong>{{.Artist.CreationDate}}</p>
+                <p><strong>First Album: </strong>{{.Artist.FirstAlbum}}</p>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
