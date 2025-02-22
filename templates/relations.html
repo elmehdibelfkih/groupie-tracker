@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{.Artist.Name}}</title>
     <link rel="stylesheet" href="/static/relations.css">
+    <script src="/static/js/toggledates.js"></script>
 </head>
 <body>
     <div class="card">
@@ -25,7 +26,19 @@
             </ul>
         </div>
         <div class="target">
-            
+            <h2>Relations</h2>
+            <ul>
+                {{range $key, $value := .DatesLocations}}
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleDates('location-{{$key}}')">{{$key}}</a>
+                    <ul class="dates" id="location-{{$key}}">
+                        {{range $value}}
+                        <li>{{.}}</li>
+                        {{end}}
+                    </ul>
+                </li>
+                {{end}}
+            </ul>
         </div>
     </div>
 </body>

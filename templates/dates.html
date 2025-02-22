@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{.Artist.Name}}</title>
-    <link rel="stylesheet" href="/static/relations.css">
+    <link rel="stylesheet" href="/static/dates.css">
 </head>
+
 <body>
     <div class="card">
         <div class="artist">
@@ -24,6 +26,15 @@
                 <p><strong>First Album: </strong>{{.Artist.FirstAlbum}}</p>
             </ul>
         </div>
+        <div class="target">
+            <h2>Dates</h2>
+            <ul>
+                {{range .Dates}}
+                <li>{{.}}</li>
+                {{end}}
+            </ul>
+        </div>
     </div>
 </body>
+
 </html>

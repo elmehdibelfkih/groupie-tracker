@@ -17,6 +17,7 @@ func RootHandler(w http.ResponseWriter, r *http.Request) {
 		error.NotFoundError(w, r)
 		return
 	}
+	FetchAPIs(API_URL)
 	INDEX_TMPL.Execute(w, ArtistsStruct)
 }
 
