@@ -3,11 +3,11 @@ package internal
 import (
 	"html/template"
 	"log"
-
 	"groupie-tracker/error"
 )
 
 func InitTmpl() {
+
 	tmp, err := template.ParseFiles(INDEX_PATH)
 	if err != nil {
 		log.Fatal(err)
@@ -38,13 +38,11 @@ func InitTmpl() {
 	}
 	LOCATIONS_TMPL = template.Must(tmp4, err4)
 }
-
 /// 
 func Removeandreturn(str []string) []string {
 	result := []string{}
 	s := ""
 	var temp string
-
 	for _, c := range str {
 		temp = c
 		j := 0
