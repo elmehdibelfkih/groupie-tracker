@@ -81,6 +81,8 @@ func DateHandler(w http.ResponseWriter, r *http.Request) {
 	var date Date
 	FetchAPI(ArtistsStruct[id-1].ConcertDates, &date)
 	date.Artist = &ArtistsStruct[id-1]
+	//TODO: trim *
+	date.Dates = Removeandreturn(date.Dates)
 	DATES_TMPL.Execute(w, date)
 }
 
