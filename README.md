@@ -6,8 +6,6 @@ Groupie Tracker is a web application that displays information about various mus
 ## Features
 - **Artist Information**: Displays artist details such as name, image, members, first album, and activity start year.
 - **Concert Locations & Dates**: Lists past and upcoming concerts with corresponding dates and locations.
-- **Search & Filter**: Allows users to search for artists and filter concerts.
-- **Interactive Map**: Displays concert locations on an interactive map.
 - **Client-Server Communication**: Implements an event-driven feature where user interactions trigger a request to the server for additional data.
 
 ## Technologies Used
@@ -55,14 +53,6 @@ The application fetches data from an external API that consists of four main end
 - Handles API failures gracefully by displaying error messages to users.
 - Uses logging to capture server-side errors.
 - Prevents crashes due to invalid API responses.
-
-<!-- ## Testing
-- Unit tests are implemented using Go's `testing` package.
-- Tests cover API fetching, data parsing, and server responses.
-- Run tests with:
-  ```sh
-  go test ./...
-  ``` -->
 
 ## Future Improvements
 - Add user authentication for personalized features.

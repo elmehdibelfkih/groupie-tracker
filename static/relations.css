@@ -1,29 +1,11 @@
 body {
-    background-image: url(https://pikbest.com/backgrounds/golden-note-of-music-background_2451607.html);
+    background-image: url(https://wallpaperswide.com/download/old_music_score_background-wallpaper-1600x900.jpg);
     background-size: cover;
     position: relative;
     display: flex;
     justify-content: center;
     font-family: Arial, sans-serif;
-    background-color: #181717;
 
-}
-
-.info {
-
-    text-align: center;
-}
-
-.target {
-}
-
-
-.howa {
-
-    display: flex;
-    position: absolute;
-    right: 50px;
-    align-items: center;
 }
 
 .card {
@@ -33,11 +15,49 @@ body {
     justify-content: center;
     top: 200px;
     text-align: center;
-    background-color: rgb(87, 83, 83);
+    background-color: rgb(222,199,138);
     width: 50%;
     min-height: 50vh;
     border-radius: 20px;
     flex-wrap: wrap;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.425);
+}
+
+.artist {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    margin: 5px;
+    min-height: 100px;
+    min-width: 250px;
+}
+
+.info {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    margin: 5px;
+    min-height: 300px;
+    min-width: 250px;
+
+}
+
+.target {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    margin: 5px;
+    min-height: 300px;
+    min-width: 150px;
+}
+
+.dates {
+
+    text-decoration: none;
+    display: none;
 }
 
 
@@ -54,27 +74,40 @@ ul li {
 ul li a {
     text-decoration: none;
     color: #181717;
-    background-color: blueviolet;
+    text-shadow: 0 0 20px rgb(7, 3, 255);
+    transition: transform 0.6s text-shadow 0.6s;
 
 }
 
-.dates {
-
-    text-decoration: none;
-    display: none;
+ul li a:hover {
+    text-shadow: 0 0 10px rgb(255, 0, 0);
+    transform: scale(1.05);
 }
 
 .artist img {
-
+    max-width: 200px;
     border-radius: 20px;
 }
 
-.artist {
+@media only screen and (max-width: 600px) {
+    .artist{
+        width: 60%;
+    }
+    .artist img {
+        max-width: 100px;
+        border-radius: 20px;
+    }
+}
 
-    position: absolute;
-    left: 0;
-    padding: 50px;
-    border-right: #181717 2px solid;
-    border-radius: 20px;
-    margin-left: 0;
+@media only screen and (max-width: 350px) {
+    .card .target{
+        font-size: 0,5em;
+    }
+    .artist{
+        width: 60%;
+    }
+    .artist img {
+        max-width: 100px;
+        border-radius: 20px;
+    }
 }

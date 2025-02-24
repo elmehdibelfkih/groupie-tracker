@@ -1,5 +1,6 @@
 body {
-    background-image: url(https://www.vecteezy.com/photo/42192577-ai-generated-music-game-background);
+    background-image: url(https://wallpaperswide.com/download/old_music_score_background-wallpaper-1600x900.jpg);
+    background-size: contain;
     font-family: Arial, sans-serif;
     background-color: #181717;
     text-align: center;
@@ -8,7 +9,7 @@ body {
 .artist-card  {
     text-decoration: none;
     display: inline-block;
-    background: rgb(87, 83, 83);
+    background: rgb(243, 214, 128);
     margin: 10px;
     min-width: 240px;
     min-height: 350px;
@@ -16,6 +17,7 @@ body {
     border-radius: 20px;
     text-align: center;
     transition: transform 0.3s ease-in-out;
+    border:  rgb(126, 126, 126) solid 3px;
 }
 
 .artist-card a {
@@ -26,12 +28,12 @@ body {
 
 .artist-card:hover {
     transform: scale(1.07);
-    background-color: rgb(114, 109, 109);
+    background-color:  rgb(222,199,150);
     transition: ease-in-out 0.5s;
 }
 
 .button1 {
-    background-color: rgb(87, 83, 83);
+    background-color:  rgb(222,199,90);
     color: rgb(19, 1, 1);
     font-size: 21px;
     border: 1px solid rgb(126, 126, 126);
@@ -42,7 +44,7 @@ body {
 }
 
 .button1:hover {
-    background-color: #3e3e55;
+    background-color:  rgb(222,199,170);
     transform: scale(1.05);
 
 }

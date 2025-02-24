@@ -1,6 +1,6 @@
 
 body {
-    /* background-image: url(https://as1.ftcdn.net/v2/jpg/00/58/06/10/1000_F_58061024_xqxZ7HnfKfTLqYIMgJcMODakUXyl4XUr.jpg); */
+    background-image: url(https://wallpaperswide.com/download/old_music_score_background-wallpaper-1600x900.jpg);
     background-color: black;
     background-size: cover;
     font-family: Arial, sans-serif;
@@ -74,7 +74,7 @@ ul {
     font-size: 14px;
     font-weight: bold;
     color: #fff;
-    background-color: #03254b;
+    background-color: #ddbe0f;
     border: none;
     border-radius: 5px;
     text-decoration: none;
@@ -82,19 +82,12 @@ ul {
 }
 
 .home-button:hover {
-    background-color: #0056b3;
+    background-color: #9b8b00;
 }
 
-@media(min-aspect-ratio: 16/9) {
-    .video-bg{
-        width: 100%;
-        height: auto;
-    }
-}
-
-@media(max-aspect-ratio: 16/9) {
+/* @media(max-aspect-ratio: 16/9) {
     .video-bg{
         width: auto;
         height: 90%;
     }
-}
+} */
