@@ -1,34 +1,80 @@
 body {
-    display:flex;
+    background-image: url(https://pikbest.com/backgrounds/golden-note-of-music-background_2451607.html);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
     font-family: Arial, sans-serif;
     background-color: #181717;
+
+}
+
+.info {
+
     text-align: center;
 }
 
-/* .card {
-    display: inline-block;
-    background: rgb(87, 83, 83);
+.target {
+}
 
-} */
 
-/* .artist { */
-    /* border: 4px; */
-/* } */
+.howa {
 
-.info {
-    border: 2px solid black;
+    display: flex;
+    position: absolute;
+    right: 50px;
+    align-items: center;
 }
 
 .card {
-    height: 200px;
-    width: 800px;
     display: flex;
-    justify-content: center;
+    position: absolute;
     align-items: center;
-    height: 100vh;
+    justify-content: center;
+    top: 200px;
+    text-align: center;
+    background-color: rgb(87, 83, 83);
+    width: 50%;
+    min-height: 50vh;
+    border-radius: 20px;
+    flex-wrap: wrap;
+}
 
-    border: 2px solid rgb(73, 1, 73);
-    background: rgb(87, 83, 83);
-    /* border: #181717; */
 
+ul {
+    padding: 0;
+}
+
+ul li {
+
+    list-style: none;
+    margin: 5px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #181717;
+    background-color: blueviolet;
+
+}
+
+.dates {
+
+    text-decoration: none;
+    display: none;
+}
+
+.artist img {
+
+    border-radius: 20px;
+}
+
+.artist {
+
+    position: absolute;
+    left: 0;
+    padding: 50px;
+    border-right: #181717 2px solid;
+    border-radius: 20px;
+    margin-left: 0;
 }

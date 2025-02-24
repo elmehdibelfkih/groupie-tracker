@@ -1,0 +1,59 @@
+body {
+    /* background-image: url(https://pikbest.com/backgrounds/golden-note-of-music-background_2451607.html); */
+    /* background-size: cover; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    /* background-color: #181717; */
+
+}
+
+.card {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.artist {
+    text-align: center;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    margin: 5px;
+    min-height: 300px;
+    min-width: 250px;
+}
+
+.info {
+    text-align: center;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    margin: 5px;
+    min-height: 300px;
+    min-width: 250px;
+
+}
+
+.target {
+    text-align: center;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    margin: 5px;
+    min-height: 300px;
+    min-width: 150px;
+}
+
+ul li {
+
+    list-style: none;
+    margin: 5px;
+}

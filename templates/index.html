@@ -12,7 +12,7 @@
     {{range .}}
     <div class="artist-card">
         <a href="/Relation/{{.Id}}" >
-            <img src="{{.Image}}" alt="{{.Id}}" loading="lazy">
+            <img src="{{.Image}}" alt="{{.Id}}" >
             <p>{{.Name}}</p>
             <a href="/Locations/{{.Id}}">
                 <button class="button1">Locations</button>
@@ -20,9 +20,6 @@
             <a href="/Dates/{{.Id}}">
                 <button class="button1">Dates</button>
             </a>
-            <!-- <a href="/artist/Relation/{{.Id}}">
-                <button class="button1">Relation</button>
-            </a> -->
         </a>
     </div>
     {{end}}
