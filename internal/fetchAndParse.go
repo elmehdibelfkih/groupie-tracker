@@ -2,9 +2,9 @@ package internal
 
 import (
 	"encoding/json"
+	"groupie-tracker/error"
 	"io"
 	"net/http"
-	"groupie-tracker/error"
 )
 
 var (
@@ -13,7 +13,6 @@ var (
 )
 
 func FetchAPIs(url string, w http.ResponseWriter) {
-
 
 	response, err := http.Get(url)
 	// TODO: check the response status
@@ -44,7 +43,6 @@ func FetchAPI(url string, v any, w http.ResponseWriter) {
 		error.BadGateway(w)
 		return
 	}
-	println("test1")
 	defer response.Body.Close()
 	body, err := io.ReadAll(response.Body)
 	if err != nil {

@@ -1,72 +1,48 @@
 body {
     background-image: url(https://wallpaperswide.com/download/old_music_score_background-wallpaper-1600x900.jpg);
     background-size: cover;
-    position: relative;
+    background-position: center;
+    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
-    font-family: Arial, sans-serif;
-
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
 .card {
     display: flex;
-    position: absolute;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    top: 200px;
-    text-align: center;
     background-color: rgb(222,199,138);
     width: 50%;
+    max-width: 800px;
     min-height: 50vh;
     border-radius: 20px;
-    flex-wrap: wrap;
+    padding: 20px;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.425);
+    position: relative;
 }
 
-.artist {
+.artist, .info, .target {
     text-align: center;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
+    padding: 10px;
     margin: 5px;
-    min-height: 100px;
-    min-width: 250px;
+    flex-grow: 1;
 }
 
-.info {
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
-    margin: 5px;
-    min-height: 300px;
-    min-width: 250px;
-
+.artist img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 20px;
 }
-
-.target {
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
-    margin: 5px;
-    min-height: 300px;
-    min-width: 150px;
-}
-
-.dates {
-
-    text-decoration: none;
-    display: none;
-}
-
 
 ul {
     padding: 0;
 }
 
 ul li {
-
     list-style: none;
     margin: 5px;
 }
@@ -75,8 +51,7 @@ ul li a {
     text-decoration: none;
     color: #181717;
     text-shadow: 0 0 20px rgb(7, 3, 255);
-    transition: transform 0.6s text-shadow 0.6s;
-
+    transition: transform 0.6s, text-shadow 0.6s;
 }
 
 ul li a:hover {
@@ -84,30 +59,23 @@ ul li a:hover {
     transform: scale(1.05);
 }
 
-.artist img {
-    max-width: 200px;
-    border-radius: 20px;
-}
-
 @media only screen and (max-width: 600px) {
-    .artist{
+    .artist {
         width: 60%;
     }
     .artist img {
         max-width: 100px;
-        border-radius: 20px;
     }
 }
 
 @media only screen and (max-width: 350px) {
-    .card .target{
-        font-size: 0,5em;
+    .card .target {
+        font-size: 0.5em;
     }
-    .artist{
-        width: 60%;
+    .artist {
+        width: 80%;
     }
     .artist img {
         max-width: 100px;
-        border-radius: 20px;
     }
 }

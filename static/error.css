@@ -1,8 +1,8 @@
-
 body {
     background-image: url(https://wallpaperswide.com/download/old_music_score_background-wallpaper-1600x900.jpg);
     background-color: black;
     background-size: cover;
+    background-position: center;
     font-family: Arial, sans-serif;
     color: #e0e0e0;
     margin: 0;
@@ -11,7 +11,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     text-align: center;
 }
 
@@ -22,36 +22,35 @@ body {
     padding: 25px;
     border-radius: 12px;
     border: 1px solid #ffffff;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .error-title {
     font-size: 28px;
     font-weight: bold;
     color: #ff6b6b;
-    margin-bottom: 15px;
 }
 
 .error-message {
     font-size: 20px;
     color: #ffcc00;
-    margin-bottom: 15px;
 }
 
 .error-description {
     font-size: 16px;
     color: #b0b0b0;
-    margin-bottom: 20px;
 }
 
 .error-details {
     font-size: 14px;
-    color: #ccc;
+    color: #f0f0f0;
     background: #333;
     padding: 10px;
     border-radius: 8px;
     text-align: left;
-    margin-top: 10px;
 }
 
 ul {
@@ -78,16 +77,41 @@ ul {
     border: none;
     border-radius: 5px;
     text-decoration: none;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .home-button:hover {
     background-color: #9b8b00;
+    color: #ffffff;
 }
 
-/* @media(max-aspect-ratio: 16/9) {
-    .video-bg{
-        width: auto;
-        height: 90%;
+@media (max-width: 600px) {
+    .error-code {
+        font-size: 60px;
     }
-} */
+    .error-title {
+        font-size: 24px;
+    }
+    .error-message {
+        font-size: 18px;
+    }
+    .error-container {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .error-code {
+        font-size: 50px;
+    }
+    .error-title {
+        font-size: 22px;
+    }
+    .error-message {
+        font-size: 16px;
+    }
+    .home-button {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+}

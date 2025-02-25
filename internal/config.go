@@ -2,7 +2,8 @@ package internal
 
 import "html/template"
 
-const API_URL = "https://groupietrackers.herokuapp.com/api" 
+const API_URL = "https://groupietrackers.herokuapp.com/api"
+
 var INDEX_TMPL *template.Template
 var LOCATIONS_TMPL *template.Template
 var DATES_TMPL *template.Template
