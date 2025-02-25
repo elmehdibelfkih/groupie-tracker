@@ -2,13 +2,13 @@ package main
 
 import (
 	"fmt"
-	"groupie-tracker/internal"
 	"net/http"
 	"os"
+	"groupie-tracker/internal"
 )
 
 func main() {
-	internal.FetchAPIs(internal.API_URL)
+	//-->>
 	internal.InitTmpl()
 	http.HandleFunc("/static/", internal.StaticHandler)
 	http.HandleFunc("/", internal.RootHandler)

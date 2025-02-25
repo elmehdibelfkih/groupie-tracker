@@ -17,7 +17,7 @@ type Error struct {
 
 var ERRORTMPL *template.Template
 
-func NotFoundError(w http.ResponseWriter, r *http.Request) {
+func NotFoundError(w http.ResponseWriter) {
 	notFoundError := Error{
 		StatusCode:       404,
 		StatusText:       "Not Found",
@@ -29,7 +29,7 @@ func NotFoundError(w http.ResponseWriter, r *http.Request) {
 	ERRORTMPL.Execute(w, notFoundError)
 }
 
-func MethodNotAllowed(w http.ResponseWriter, r *http.Request) {
+func MethodNotAllowed(w http.ResponseWriter) {
 	methodNotAllowed := Error{
 		StatusCode:       405,
 		StatusText:       "Method not allowed",
@@ -41,7 +41,7 @@ func MethodNotAllowed(w http.ResponseWriter, r *http.Request) {
 	ERRORTMPL.Execute(w, methodNotAllowed)
 }
 
-func InternalServerError(w http.ResponseWriter, r *http.Request) {
+func InternalServerError(w http.ResponseWriter) {
 	internalServerError := Error{
 		StatusCode:       500,
 		StatusText:       "Internal Server Error",
@@ -53,7 +53,7 @@ func InternalServerError(w http.ResponseWriter, r *http.Request) {
 	ERRORTMPL.Execute(w, internalServerError)
 }
 
-func BadRequest(w http.ResponseWriter, r *http.Request) {
+func BadRequest(w http.ResponseWriter) {
 	badRequest := Error{
 		StatusCode:       400,
 		StatusText:       "Bad Request",
@@ -63,4 +63,16 @@ func BadRequest(w http.ResponseWriter, r *http.Request) {
 	}
 	w.WriteHeader(badRequest.StatusCode)
 	ERRORTMPL.Execute(w, badRequest)
+}
+
+func BadGateway(w http.ResponseWriter) {
+	badGateway := Error{
+		StatusCode:       502,
+		StatusText:       "Bad Gateway",
+		ErrorMessage:     "The server received an invalid response from the upstream server.",
+		ErrorTitle:       "Oops! Bad Gateway",
+		ErrorDescription: "The server encountered an issue while communicating with another service.",
+	}
+	w.WriteHeader(badGateway.StatusCode)
+	ERRORTMPL.Execute(w, badGateway)
 }

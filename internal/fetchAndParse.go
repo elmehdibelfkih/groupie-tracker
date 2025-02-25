@@ -3,44 +3,57 @@ package internal
 import (
 	"encoding/json"
 	"io"
-	"log"
 	"net/http"
+	"groupie-tracker/error"
 )
 
-var APIsStruct APIs
-var ArtistsStruct Artists
+var (
+	APIsStruct    APIs
+	ArtistsStruct Artists
+)
 
-func FetchAPIs(url string) {
+func FetchAPIs(url string, w http.ResponseWriter) {
+
 
 	response, err := http.Get(url)
 	// TODO: check the response status
 	if err != nil {
-		log.Fatal(err)
+		// TODO: INTERNEL SERVER ERORR !
+		error.BadGateway(w)
+		return
 	}
 	defer response.Body.Close()
 	body, err := io.ReadAll(response.Body)
 	if err != nil {
-		log.Fatal(err)
+		// TODO: INTERNEL SERVER ERORR !
+		error.BadGateway(w)
+		return
 	}
 	err1 := json.Unmarshal(body, &APIsStruct)
 	if err1 != nil {
-		log.Fatal(err)
+		error.BadGateway(w)
+		return
 	}
-	FetchAPI(APIsStruct.Artists, &ArtistsStruct)
+	FetchAPI(APIsStruct.Artists, &ArtistsStruct, w)
 }
 
-func FetchAPI(url string, v any) {
+func FetchAPI(url string, v any, w http.ResponseWriter) {
+
 	response, err := http.Get(url)
 	if err != nil {
-		log.Fatal(err)
+		error.BadGateway(w)
+		return
 	}
+	println("test1")
 	defer response.Body.Close()
 	body, err := io.ReadAll(response.Body)
 	if err != nil {
-		log.Fatal(err)
+		error.BadGateway(w)
+		return
 	}
 	err1 := json.Unmarshal(body, v)
 	if err1 != nil {
-		log.Fatal(err)
+		error.BadGateway(w)
+		return
 	}
 }
